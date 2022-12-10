@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'mixinsfunc';
+
+header {
+    // Personalizo el header
+    width: 100%;
+    background-color: $color-primary;
+    user-select: none;
+    nav {
+    // Personalizo el header y le doy flex
+        height: 100%;
+        @include crear-flexblox(space-between);
+        // Personalizo el menu, el logo, y el menu hambuerguesa
+        .logo {
+            width: 40px;
+            margin-left: 10px;
+        }
+        .bar-btn {
+            font-size: 25px;
+            margin-right: 10px;
+            color: $color-secondary;
+            cursor: pointer;
+            z-index: 100;
+            position: fixed;
+            right: 0px;
+        }
+        .nav-menu {
+            position: fixed;
+            width: 100%;
+            height: 0vh;
+            top: 0px;
+            z-index: 99;
+            background-color: rgba(0, 0, 0, 0.89);
+            text-align: $text-center;
+            transition: all .4s;
+            li {
+                display: none;
+                line-height: 30px;
+                margin: 80px 0;
+                transition: all 0.4s;
+                text-align: $text-center; 
+                a {
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: none;
+                    &.active, &:hover {
+                        color: $color-secondary;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+        #check {
+            display: none;
+            &:checked ~ .nav-menu {
+                height: 100vh;
+                li {
+                    display: block;
+                }
+            }
+        }
+        // Le doy responsive y saco el menu hambuerguesa
+        @media screen and (min-width:768px) {
+            .logo {
+                margin-left: 30px;
+            }
+            nav {
+                height: 100px;
+            }
+    
+            .bar-btn {
+                display: none;
+            }
+            .nav-menu {
+                position: relative;
+                height: 80px;
+                top: 0;
+                transition: none;
+                background: none;
+                text-align: right;
+                }    
+            .nav-menu li {
+                display: inline-block;
+                line-height: 100px;
+                margin: 0 15px;
+                transition: none;
+            }
+            .nav-menu li a{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+

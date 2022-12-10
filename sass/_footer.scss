@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixinsfunc';
+
+#footer{
+    // Doy color al footer
+    background-color: $color-primary;
+    user-select: none;
+    section{
+        color: #fff;
+        // Personalizo texto e iconos
+        h2{
+            text-align: $text-center;
+            font-size: 1rem;
+            &:hover {
+                cursor: pointer;
+                color: $color-secondary;
+                transition: all .4s ease-in-out;
+            }
+        }
+        .redes {
+            @include crear-flexblox(space-evenly);
+            font-size: 0.8rem;
+            margin: 10px;
+            @include iconos-personalizados;
+        }
+        .copyright {
+            display: block;
+            h3 {
+                font-size: 0.7rem;
+                text-align: $text-center;
+            }
+        }
+        // Agrego un pequeño reponsive a los iconos
+        @media screen and (min-width:720px) {
+            .redes {
+                font-size: 1rem;
+            }
+            
+        }
+    }
+}
+

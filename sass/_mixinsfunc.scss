@@ -1,0 +1,60 @@
+// Creo un mixin para flex 
+@mixin crear-flexblox ($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin wsp-boton($ancho, $altura, $size){
+    width: $ancho;
+    height: $altura;
+    font-size: $size;
+}
+
+@mixin card-productos{
+    .card {
+        height: 350px;
+        margin: 10px auto;
+        &:hover {
+            border: 2px solid $color-secondary;
+            box-shadow: 0 0 5px 2px $color-secondary;
+        }
+        .card-img-top {
+            width: 75%;
+            height: 170px;
+            margin: $centrar;
+        }
+        .btn {
+            background-color: $color-secondary;
+            border-style: none;
+            color: #fff;
+        }
+    }
+}
+
+@mixin iconos-personalizados {
+    .fa-instagram {
+        color: #DF4465;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .fa-facebook {
+        color: #1873EB;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .fa-twitter {
+        color: #1C96E9;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .fa-tiktok {
+        color: #DF4465;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

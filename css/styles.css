@@ -1,0 +1,303 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  grid-template-areas: "header" "main" "footer";
+}
+
+#header {
+  grid-area: header;
+}
+
+#main {
+  grid-area: main;
+}
+
+#aside {
+  grid-area: aside;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(8, 25, 43);
+  user-select: none;
+}
+header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .logo {
+  width: 40px;
+  margin-left: 10px;
+}
+header nav .bar-btn {
+  font-size: 25px;
+  margin-right: 10px;
+  color: rgb(49, 202, 64);
+  cursor: pointer;
+  z-index: 100;
+  position: fixed;
+  right: 0px;
+}
+header nav .nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 0px;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.89);
+  text-align: center;
+  transition: all 0.4s;
+}
+header nav .nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 80px 0;
+  transition: all 0.4s;
+  text-align: center;
+}
+header nav .nav-menu li a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+header nav .nav-menu li a.active, header nav .nav-menu li a:hover {
+  color: rgb(49, 202, 64);
+  transition: all 0.3s;
+}
+header nav #check {
+  display: none;
+}
+header nav #check:checked ~ .nav-menu {
+  height: 100vh;
+}
+header nav #check:checked ~ .nav-menu li {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  header nav .logo {
+    margin-left: 30px;
+  }
+  header nav nav {
+    height: 100px;
+  }
+  header nav .bar-btn {
+    display: none;
+  }
+  header nav .nav-menu {
+    position: relative;
+    height: 80px;
+    top: 0;
+    transition: none;
+    background: none;
+    text-align: right;
+  }
+  header nav .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 15px;
+    transition: none;
+  }
+  header nav .nav-menu li a {
+    font-size: 1rem;
+  }
+}
+
+main section .wsp_contacto {
+  position: fixed;
+  right: 5px;
+  bottom: 40px;
+  width: 35px;
+  height: 35px;
+  font-size: 1.4rem;
+  background-color: rgb(86, 187, 91);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: -2px 3px 3px rgba(108, 108, 108, 0.497);
+  z-index: 97;
+}
+@media screen and (min-width: 768px) {
+  main section .wsp_contacto {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section .wsp_contacto {
+    width: 60px;
+    height: 60px;
+    font-size: 2.3rem;
+  }
+}
+
+main {
+  user-select: none;
+}
+main .carousel {
+  margin: 2px 0px;
+}
+main .carousel .carousel-image {
+  height: 180px;
+}
+main h1, main h2 {
+  margin: 25px 0px 15px 5px;
+  font-size: 1.5rem;
+}
+main h1 span, main h2 span {
+  border-bottom: 2px solid rgb(49, 202, 64);
+}
+main .destacados-card-container .card, main .pc-card-container .card {
+  height: 350px;
+  margin: 10px auto;
+}
+main .destacados-card-container .card:hover, main .pc-card-container .card:hover {
+  border: 2px solid rgb(49, 202, 64);
+  box-shadow: 0 0 5px 2px rgb(49, 202, 64);
+}
+main .destacados-card-container .card .card-img-top, main .pc-card-container .card .card-img-top {
+  width: 75%;
+  height: 170px;
+  margin: 0 auto;
+}
+main .destacados-card-container .card .btn, main .pc-card-container .card .btn {
+  background-color: rgb(49, 202, 64);
+  border-style: none;
+  color: #fff;
+}
+@media screen and (min-width: 720px) {
+  main .carousel .carousel-image {
+    height: 240px;
+  }
+  main h1, main h2 {
+    font-size: 1.5rem;
+    margin: 25px 15px;
+  }
+  main .destacados-card-container, main .pc-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1020px) {
+  main .carousel .carousel-image {
+    height: 400px;
+  }
+  main h1, main h2 {
+    font-size: 2rem;
+    margin: 35px 25px;
+  }
+  main .destacados-card-container, main .pc-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+}
+
+.formulario {
+  margin: 50px auto;
+  width: 65%;
+  border: 2px solid rgb(49, 202, 64);
+  box-shadow: 0 0 5px 2px rgb(49, 202, 64);
+  border-radius: 5px;
+}
+.formulario form div {
+  text-align: center;
+  margin: 10px 0px;
+}
+.formulario form div label {
+  display: block;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.formulario form div input {
+  border: 2px solid rgb(49, 202, 64);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: rgb(8, 25, 43);
+  width: 70%;
+}
+.formulario form div select {
+  width: 70%;
+}
+.formulario form .enviar {
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(49, 202, 64);
+  color: #fff;
+  padding: 5px;
+}
+
+#footer {
+  background-color: rgb(8, 25, 43);
+  user-select: none;
+}
+#footer section {
+  color: #fff;
+}
+#footer section h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+#footer section h2:hover {
+  cursor: pointer;
+  color: rgb(49, 202, 64);
+  transition: all 0.4s ease-in-out;
+}
+#footer section .redes {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
+  margin: 10px;
+}
+#footer section .redes .fa-instagram {
+  color: #DF4465;
+}
+#footer section .redes .fa-instagram:hover {
+  cursor: pointer;
+}
+#footer section .redes .fa-facebook {
+  color: #1873EB;
+}
+#footer section .redes .fa-facebook:hover {
+  cursor: pointer;
+}
+#footer section .redes .fa-twitter {
+  color: #1C96E9;
+}
+#footer section .redes .fa-twitter:hover {
+  cursor: pointer;
+}
+#footer section .redes .fa-tiktok {
+  color: #DF4465;
+}
+#footer section .redes .fa-tiktok:hover {
+  cursor: pointer;
+}
+#footer section .copyright {
+  display: block;
+}
+#footer section .copyright h3 {
+  font-size: 0.7rem;
+  text-align: center;
+}
+@media screen and (min-width: 720px) {
+  #footer section .redes {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

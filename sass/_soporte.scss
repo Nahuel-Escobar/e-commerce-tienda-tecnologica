@@ -1,0 +1,27 @@
+@import 'mixinsfunc';
+main {
+    section {
+        .wsp_contacto {
+            position: fixed;
+            right: 5px;
+            bottom: 40px;
+            @include wsp-boton (35px, 35px, 1.4rem);
+            background-color: rgb(86, 187, 91);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: -2px 3px 3px rgba(108, 108, 108, 0.497);
+            z-index: 97;
+        }
+        @media screen and (min-width:768px) {
+            .wsp_contacto {
+                @include wsp-boton (50px, 50px, 2rem);
+            }
+        }
+        @media screen and (min-width:1024px) {
+            .wsp_contacto {
+                @include wsp-boton (60px, 60px, 2.3rem);
+            }
+        }
+    }
+}

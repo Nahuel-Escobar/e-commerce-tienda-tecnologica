@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixinsfunc';
+
+main {
+    user-select: none;
+    // Personalizo el carousel de bootstrap
+    .carousel {
+        margin: 2px 0px;
+        .carousel-image {
+            height: 180px;
+        } 
+    }
+    // Personalizo encabezado
+    h1{
+        margin: 25px 0px 15px 5px;
+        font-size: 1.5rem;
+        span {
+            border-bottom: 2px solid $color-secondary;
+        }
+    }
+    h2 {
+        @extend  h1;
+    }
+    // Personalizo las cards
+    .destacados-card-container, .pc-card-container {
+        @include card-productos;
+    }
+    // Agrego responsive al carousel y las cards
+    // Responsive en Tablets
+    @media screen and (min-width:720px){
+        .carousel {
+            .carousel-image {
+                height: 240px;
+            } 
+        }
+        h1, h2 {
+            font-size: 1.5rem;
+            margin: 25px 15px;
+        }
+        .destacados-card-container, .pc-card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }   
+    }
+    // Responsive en computadoras
+    @media screen and (min-width:1020px){
+        .carousel {
+            .carousel-image {
+                height: 400px;
+            } 
+        }        
+        h1, h2 {
+            font-size: 2rem;
+            margin: 35px 25px;
+        }
+        .destacados-card-container, .pc-card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: $centrar;
+        }   
+    }
+}

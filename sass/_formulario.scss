@@ -1,0 +1,41 @@
+@import 'variables';
+
+.formulario {
+    margin: 50px auto;
+    width: 65%;
+    border: 2px solid $color-secondary;
+    box-shadow: 0 0 5px 2px $color-secondary;
+    border-radius: 5px;
+    form{
+        div{
+            text-align: center;
+            margin: 10px 0px;
+            label {
+                display: block;
+                font-size: 1rem;
+                margin: 5px 0;
+            }
+            input {
+                border: 2px solid $color-secondary;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: 1rem;
+                background-color: #fff;
+                color: $color-primary;
+                width: 70%;
+            }
+            select{
+                width: 70%;
+            }
+        }
+        .enviar {
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+            border-style: none;
+            background-color: $color-secondary;
+            color: #fff;
+            padding: 5px;
+        }
+    }
+}
