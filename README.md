@@ -1,8 +1,7 @@
-# PreEntrega3-Escobar
-Entrega numero 3 del curso Coderhouse (comisión 33115)
+# Pf+Escobar
+Entrega del Proyecto Final de Coderhouse (comisión 33115)
 
 Nombre: Esteban Nahuel Escobar 
 
-Entrega: PreEntregar+Escobabar
+Entrega: Pf+Escobar
 
-Link a pagina: https://nahuel-escobar.github.io/PreEntrega3-Escobar/
