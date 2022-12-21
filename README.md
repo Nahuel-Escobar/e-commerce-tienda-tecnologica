@@ -1,8 +1,5 @@
-# Pf+Escobar
-Entrega del Proyecto Final de Coderhouse (comisión 33115)
+Tienda tecnologica de computadoras / consolas de videojuegos
 
-Nombre: Esteban Nahuel Escobar 
+Este E-Commerce esta hecho con : Html5, Css3, Sass, Bootstrap y Git.  
 
-Entrega: Pf+Escobar
-
-Link a la pagina del proyecto final: https://nahuel-escobar.github.io/ProyectoFinal/
+Link a la pagina: https://nahuel-escobar.github.io/ProyectoFinal/
